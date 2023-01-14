@@ -1,0 +1,33 @@
+{{ define "main" }}
+	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+	{{ if gt (len $list) 0 }}
+		<section class="categories">
+			<header>
+				<h1>By Category</h1>
+			</header>
+			<ul>
+			{{ range $list -}}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{- end }}
+			</ul>
+		</section>
+	{{ end }}
+	
+<section class="archive">	
+	<header>
+		<h1>Everything</h1>
+	</header>
+	
+	<ul>
+	{{ $list := (where .Site.Pages "Type" "post") }}
+	{{ range $list }}
+		<li>
+			<dl>
+			<dt><a href="{{ .Permalink }}">{{ .Title }}</a></dt>
+			<dl>{{ .Date.Format "Jan 2, 2006" }}</dl>
+			</dl>
+		</li>
+	{{ end }}
+	</ul>
+</section>
+{{ end }}

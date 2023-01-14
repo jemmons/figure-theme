@@ -1,8 +1,9 @@
 body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8em; font-weight: 400; color: #001116; background-color: #DD8E00; }
 
-body header { text-align: center; margin-bottom: 48px; margin-top: 16px; }
+header { text-align: center; }
+body > header { margin-bottom: 48px; margin-top: 16px; }
 body header nav { margin-bottom: 48px; }
-body footer { text-align: center; margin-top: 48px; margin-bottom: 16px;}
+body > footer { text-align: center; margin-top: 48px; margin-bottom: 16px;}
 
 .nothing { background-color: #D68900; }
 
@@ -28,3 +29,15 @@ article header a, article header a:visited, article header a:hover { color: inhe
 pre { padding: 8px 12px; margin-left: -12px; margin-right: -12px;  border-radius: 5px; background-color: #272822; border: none;}
 pre code { font-family: Consolas, monaco, "Courier New", monospace; line-height: 1.5em; background-color: inherit; color: #FFF; }
 code { background-color: #c47e00; border: 0; color: inherit; }
+
+
+section.categories, section.archive { width: 350pt; margin-left: auto; margin-right: auto; margin-bottom: 3em; }
+section.categories a, section.archive a { text-decoration: none;font-weight: 800; font-size: 20px; }
+section.categories header, section.archive header { margin-bottom: 1em; }
+section.categories ul { margin:0; padding: 0; text-align: center;  }
+section.categories li { display: inline;  }
+section.categories li ~ li::before { content: ", " }
+section.categories a {  }
+
+section.archive li { list-style: none; }
+section.archive a { text-decoration: none; font-size: 14pt; }

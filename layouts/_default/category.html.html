@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="archive">	
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  
+  <ul>
+  {{ $list := (where .Pages "Type" "post") }}
+  {{ range $list }}
+    <li>
+      <dl>
+      <dt><a href="{{ .Permalink }}">{{ .Title }}</a></dt>
+      <dl>{{ .Date.Format "Jan 2, 2006" }}</dl>
+      </dl>
+    </li>
+  {{ end }}
+  </ul>
+</section>
+{{ end }}
