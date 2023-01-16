@@ -43,3 +43,5 @@ section.archive li { list-style: none; }
 section.archive a { text-decoration: none; font-size: 14pt; }
 
 blockquote { font: inherit; letter-spacing: 0; font-style: italic; line-height: 1.3em; color: #001116; border-left: 5px solid #c47e00; padding-right: 20px;}
+
+section.footnotes hr { border: 0; height: 1px; width: 100px; background-color: #001116; margin-top: 3em; }
