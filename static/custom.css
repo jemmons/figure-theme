@@ -45,3 +45,23 @@ section.archive a { text-decoration: none; font-size: 14pt; }
 blockquote { font: inherit; letter-spacing: 0; font-style: italic; line-height: 1.3em; color: #001116; border-left: 5px solid #c47e00; padding-right: 20px;}
 
 section.footnotes hr { border: 0; height: 1px; width: 100px; background-color: #001116; margin-top: 3em; }
+
+table { border-collapse: collapse; }
+table td, table th { padding: 5px 20px; border-left: 1px solid #001116; border-right: 1px solid #001116; text-align: center; }
+table td { border-bottom: 1px solid #aa6c00 }
+table tr:last-child td { border-bottom-style: none; }
+table thead { border-bottom: 1px solid #001116; }
+table { border: 1px solid #001116 !important; } 
+
+table tr:nth-child(even), table thead { background-color: #ce8400; }
+
+span.t, span.f { font-weight: 900; }
+table span.t, table span.f { font-size: 24px; }
+
+span.t { color: #00ff37; }
+span.t::after { content: "⊤" }
+
+span.f { color: #fdff00; }
+span.f::after { content: "⊥" }
+
+table { margin: 1em 0; }
